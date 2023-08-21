@@ -1,5 +1,5 @@
 
-// Cart Product Entry
+// Product value //
 function addProductEntry(productName) {
     const cartProductList = document.getElementById('cart-product-list');
     const count = cartProductList.childElementCount;
@@ -8,7 +8,7 @@ function addProductEntry(productName) {
     cartProductList.appendChild(newElement);
 };
 
-// get total price
+// total price //
 let totalPrice = 0;
 const totalPriceElement = document.getElementById('main-total-price');
 
@@ -41,9 +41,11 @@ function updatePurchaseButtonState() {
 const couponCodeInput = document.getElementById('coupon-input');
 const discountAmountElement = document.getElementById('discount-amount');
 const discountedPriceElement = document.getElementById('discounted-total-price');
-// 20% Discount Function
+// Discount Function //
 function applyCoupon() {
-    const discountPercentage = 0.2; // 20% discount
+    const discountPercentage = 0.2; 
+
+    // sell200 section //
 
     if (couponCodeInput.value === 'SELL20') {
         const discountedPrice = totalPrice * (1 - discountPercentage);
@@ -56,7 +58,7 @@ function applyCoupon() {
     }
 }
 
-// Go Home Btn
+// purchase complete //
 const goHomeBtn = document.getElementById('go-home-btn');
 goHomeBtn.addEventListener('click', function () {
     window.location.href = 'index.html'
