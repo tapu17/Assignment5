@@ -9,17 +9,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: 'rgba(18, 18, 18, 0.60)',
-                    }
-                }
-            }
-        }
-    </script>
+    
     
 
 </head>
@@ -44,17 +34,18 @@
     </header>
 
     <!-- Main div -->
-    <main class="max-w-7xl mx-auto flex flex-col sm:flex-row gap-5 sm:justify-between  px-2 lg:px-0 mb-10">
+    <main class="max-w-7xl mx-auto flex flex-col sm:flex-row gap-5 sm:justify-between  px-2 lg:px-0 pb-10">
 
-        <!-- Product lists-->
+        <!-- Product Container -->
         <section>
-            <!-- Products -->
+            <!-- Kitchenware -->
             <section class="pt-10">
                 <h2 class="text-[#111111] text-xl font-bold pb-4">Kitchenware</h2>
                 <div class="flex flex-wrap justify-center gap-5">
-                    <div class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer">
-                        <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg"><img src="images/prod1.png"
-                                alt="" /></figure>
+
+                    <div onclick="addProductEntry('K. Accessories'); addToTotal(39)" class="product-item product card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer" >
+                        <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg"><img src="images/prod1.png" alt="" />
+                        </figure>
                         <div class="card-body p-0">
                             <div class="rating mx-auto mt-5">
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -64,12 +55,13 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                             </div>
                             <h2 class="card-title mx-auto">K. Accessories</h2>
-                            <p class="text-lg text-slate-400"><span>39.00</span> TK</p>
+                            <p class="text-lg text-slate-400"><span id="product-price">39.00</span> TK</p>
                         </div>
                     </div>
-                    <div class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer">
-                        <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg"><img src="images/prod2.png"
-                                alt="" /></figure>
+
+                    <div onclick="addProductEntry('K. Accessories'); addToTotal(25)" class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer">
+                        <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg"><img src="images/prod2.png" alt="" />
+                        </figure>
                         <div class="card-body p-0">
                             <div class="rating mx-auto mt-5">
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -82,9 +74,10 @@
                             <p class="text-lg text-slate-400"><span>25.00</span> TK</p>
                         </div>
                     </div>
-                    <div class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer">
-                        <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg"><img src="images/prod3.png"
-                                alt="" /></figure>
+
+                    <div onclick="addProductEntry('Home Cooker'); addToTotal(49)" class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer">
+                        <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg"><img src="images/prod3.png" alt="" />
+                        </figure>
                         <div class="card-body p-0">
                             <div class="rating mx-auto mt-5">
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -100,13 +93,13 @@
                 </div>
             </section>
 
-            <!-- Sportswear items -->
+            <!-- Sportswear -->
             <section class="pt-10">
                 <h2 class="text-[#111111] text-xl font-bold pb-4">Sportswear</h2>
                 <div class="flex flex-wrap justify-center gap-5">
-                    <div class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer">
-                        <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg"><img src="images/prod4.png"
-                                alt="" /></figure>
+                    <div onclick="addProductEntry('Sports Back Cap'); addToTotal(49)" class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer">
+                        <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg"><img src="images/prod4.png" alt="" />
+                        </figure>
                         <div class="card-body p-0">
                             <div class="rating mx-auto mt-5">
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -119,9 +112,9 @@
                             <p class="text-lg text-slate-400"><span>49.00</span> TK</p>
                         </div>
                     </div>
-                    <div class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer">
-                        <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg"><img src="images/prod5.png"
-                                alt="" /></figure>
+                    <div onclick="addProductEntry('Full Jersey Set'); addToTotal(69)" class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer">
+                        <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg"><img src="images/prod5.png" alt="" />
+                        </figure>
                         <div class="card-body p-0">
                             <div class="rating mx-auto mt-5">
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -134,9 +127,9 @@
                             <p class="text-lg text-slate-400"><span>69.00</span> TK</p>
                         </div>
                     </div>
-                    <div class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer">
-                        <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg"><img src="images/prod6.png"
-                                alt="" /></figure>
+                    <div onclick="addProductEntry('Sports cates'); addToTotal(159)" class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer">
+                        <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg"><img src="images/prod6.png" alt="" />
+                        </figure>
                         <div class="card-body p-0">
                             <div class="rating mx-auto mt-5">
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -152,13 +145,13 @@
                 </div>
             </section>
 
-            <!-- Furniture section -->
+            <!-- Furniture -->
             <section class="pt-10">
                 <h2 class="text-[#111111] text-xl font-bold pb-4">Furniture</h2>
                 <div class="flex flex-wrap justify-center gap-5">
-                    <div class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer">
-                        <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg"><img src="images/prod7.png"
-                                alt="" /></figure>
+                    <div onclick="addProductEntry('Single Relax Chair'); addToTotal(185)" class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer">
+                        <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg"><img src="images/prod7.png" alt="" />
+                        </figure>
                         <div class="card-body p-0">
                             <div class="rating mx-auto mt-5">
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -171,9 +164,9 @@
                             <p class="text-lg text-slate-400"><span>185.00</span> TK</p>
                         </div>
                     </div>
-                    <div class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer">
-                        <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg"><img src="images/prod8.png"
-                                alt="" /></figure>
+                    <div onclick="addProductEntry('Children play'); addToTotal(299)" class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer">
+                        <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg"><img src="images/prod8.png" alt="" />
+                        </figure>
                         <div class="card-body p-0">
                             <div class="rating mx-auto mt-5">
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -186,9 +179,9 @@
                             <p class="text-lg text-slate-400"><span>299.00</span> TK</p>
                         </div>
                     </div>
-                    <div class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer">
-                        <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg"><img src="images/prod9.png"
-                                alt="" /></figure>
+                    <div onclick="addProductEntry('Flexible Sofa'); addToTotal(399)" class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer">
+                        <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg"><img src="images/prod9.png" alt="" />
+                        </figure>
                         <div class="card-body p-0">
                             <div class="rating mx-auto mt-5">
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
@@ -205,41 +198,52 @@
             </section>
 
         </section>
-        <!-- Cart lists -->
+        <!-- Cart Container -->
         <section class="text-left mt-20 pt-1">
-            <!-- others  -->
+            <!-- top -->
             <div class="top bg-white p-4 rounded-lg mb-5">
                 <p class="text-lg font-bold text-[#111111]">Have coupon?</p>
                 <div class="flex my-4">
-                    <input type="text" id="" placeholder="Coupon Code"
-                        class="px-4 py-2 border rounded-tl-lg rounded-bl-lg">
-                    <button
-                        class="text-white font-bold bg-[#E527B2] px-4 py-2 rounded-tr-lg rounded-br-lg">Apply</button>
+                    <!-- coupon input field -->
+                    <input type="text" id="coupon-input" placeholder="Coupon Code"
+                        class="px-4 py-2 bg-transparent border rounded-tl-lg rounded-bl-lg">
+                    <!-- apply coupon btn -->
+                    <button id="apply-btn"
+                        class="text-white font-bold bg-[#E527B2] px-4 py-2 rounded-tr-lg rounded-br-lg "
+                        onclick="applyCoupon()" disabled>Apply</button>
                 </div>
             </div>
-            <!-- Ending contents-->
+            <!-- bottom -->
             <div class="bottom bg-white p-4 rounded-lg">
-               
+                <!-- cart product list -->
+                <div id="cart-product-list" class="text-lg font-semibold">
 
                 </div>
                 <div class="w-full h-[1px] bg-slate-200 my-2"></div>
                 <div>
-                    <p class="text-lg text-[#111111] font-bold">Total Price : <span class="font-normal text-slate-400">00</span><span
-                            class="font-normal text-slate-400"> TK</span></p>
-                    <p class="text-lg text-[#111111] font-bold">Discount : <span class="font-normal text-slate-400">00</span><span
-                            class="font-normal text-slate-400">TK</span></p>
-                    <p class="text-lg text-[#111111] font-bold">Total : <span class="font-normal text-slate-400">00</span><span
-                            class="font-normal text-slate-400"> TK</span></p>
+                    <!-- main total price -->
+                    <p class="text-lg font-bold">Total Price : <span class="font-normal text-slate-400"
+                            id="main-total-price">00</span><span class="font-normal text-slate-400"> TK</span></p>
+                    <!-- discount amount -->
+                    <p class="text-lg font-bold">Discount : <span class="font-normal text-slate-400"
+                            id="discount-amount">00</span><span class="font-normal text-slate-400"> TK</span></p>
+                    <!-- discounted total price -->
+                    <p class="text-lg font-bold">Total : <span class="font-normal text-slate-400"
+                            id="discounted-total-price">00</span><span class="font-normal text-slate-400"> TK</span></p>
                 </div>
                 <div class="w-full h-[1px] bg-slate-200 my-2"></div>
                 <div>
-                    <button class="text-white font-bold bg-[#E527B2] px-4 py-2 rounded-lg w-[90%] mx-4 btn" onclick="my_modal_2.showModal()">Make Purchase</button>
+                    <!-- make purchase btn -->
+                    <button id="purchase-btn" disabled
+                        class="text-white font-bold bg-[#E527B2] px-4 py-2 rounded-lg w-[90%] mx-4 btn"
+                        onclick="my_modal_2.showModal()">Make Purchase</button>
                     <dialog id="my_modal_2" class="modal">
-                        <form method="dialog" class="modal-box text-center py-14">
+                        <form method="dialog" class="modal-box bg-white text-center py-14">
                             <img src="images/congo.png" alt="" class="w-1/4 mx-auto">
                             <h3 class="font-bold text-3xl mt-4">Congratulations</h3>
                             <p class="py-4 text-slate-400">Your Purchase the product</p>
-                            <button class="text-white font-bold bg-[#E527B2] px-4 py-2 rounded-lg mx-4 ">Go Home</button>
+                            <!-- go home btn -->
+                            <button id="go-home-btn" class="text-white font-bold bg-[#E527B2] px-4 py-2 rounded-lg mx-4">Go Home</button>
                         </form>
                         <form method="dialog" class="modal-backdrop">
                             <button>close</button>
@@ -248,6 +252,7 @@
                 </div>
             </div>
         </section>
+
 
     </main>
 
